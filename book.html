@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Trip</title>
+    <style>
+        
+        body {
+            background-image: url(https://images.unsplash.com/photo-1539635278303-d4002c07eae3?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8ZnJpZW5kcyUyMHRyYXZlbGxpbmd8ZW58MHx8MHx8fDA%3D);
+            color: aliceblue;
+            text-align: center;
+            min-height: 100vh;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        h1 {
+            color: rgb(192, 19, 19);
+            font-size: 40px;
+        }
+        #BK {
+            height: 550px;
+            width: 30%;
+            background-color: aliceblue;
+            color: black;
+            margin: 0 auto;
+            border-radius: 10px;
+            font-size: 20px;
+            padding: 20px;
+        }
+        input[type="submit"] {
+            background-color: #fc036b;
+            color: azure;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="Home"><a href="index.html" style="color: aliceblue;">Home</a></div>
+    <h1>Book Your Trip</h1>
+    <div id="BK">
+        <form onsubmit="return confirmSubmission()">
+            <h2>Details</h2>
+            Trip Location:
+            <select name="location" style="width:90%;" required>
+                <option value="">Select</option>
+                <option value="Manali">Manali</option>
+                <option value="Haridwar">Haridwar</option>
+                <option value="Dehradun">Dehradun</option>
+                <option value="Dharamsala">Dharamsala</option>
+                <option value="Shimla">Shimla</option>
+                <option value="Rishikesh">Rishikesh</option>
+            </select><br><br>
+
+            No. of Days/Nights:
+            <select name="duration" style="width:90%;" required>
+                <option value="">Select</option>
+                <option value="1D/2N">1D/2N</option>
+                <option value="4D/5N">4D/5N</option>
+                <option value="7D/8N">7D/8N</option>
+            </select><br><br>
+
+            No. of Persons:
+            <select name="persons" style="width:90%;" required>
+                <option value="">Select</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="More than 7">More than 7</option>
+            </select><br><br>
+
+            Stay Type:
+            <select name="stay" style="width:90%;" required>
+                <option value="">Select</option>
+                <option value="5-star Hotel">5-star Hotel</option>
+                <option value="4-star Hotel">4-star Hotel</option>
+                <option value="3-star Hotel">3-star Hotel</option>
+                <option value="2-star Hotel">2-star Hotel</option>
+                <option value="Hostel">Hostel</option>
+            </select><br><br>
+
+            Special Request:<br>
+            <textarea rows="5" cols="40" name="requests" placeholder="Any special requests"></textarea><br><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script>
+        
+        function confirmSubmission() {
+            
+            alert("Your trip booking details have been successfully submitted!");
+
+            return true;
+        }
+    </script>
+
+</body>
+</html>
